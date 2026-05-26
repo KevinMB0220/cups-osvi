@@ -619,6 +619,10 @@ footer {
   background: rgba(255, 255, 255, 0.02);
 }
 
+.combo-watch-mini .mini-image-wrapper img {
+  object-fit: contain;
+}
+
 .mini-image-wrapper {
   position: relative;
   aspect-ratio: 1;

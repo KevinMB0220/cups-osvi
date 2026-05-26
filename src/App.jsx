@@ -124,6 +124,46 @@ const COMBOS = [
     description: "La mejor selección para tu rotación semanal. Combina Chicago Sox Gold Accent, Oakland Athletics y Yankees Chocolate.",
     caps: [8, 9, 3],
     discount: "Ahorra ₡6,100"
+  },
+  {
+    id: 4,
+    name: "Combo Reloj + Gorra Esmeralda",
+    priceOriginal: "₡37,000",
+    priceCombo: "₡33,000",
+    description: "El dúo perfecto: Rolex Submariner Hulk Gold con esfera verde esmeralda y gorra Boston Celtics Shamrock en crema y verde. Coordina tu estilo como un campeón.",
+    watch: 4,
+    caps: [6],
+    discount: "Ahorra ₡4,000"
+  },
+  {
+    id: 5,
+    name: "Combo Reloj + Gorra Gold Elite",
+    priceOriginal: "₡37,000",
+    priceCombo: "₡33,000",
+    description: "Lujo en tonos dorados: Rolex Day-Date Gold con esfera cepillada y gorra Lakers Desert Gold en crema con logo desierto. Elegancia monocromática premium.",
+    watch: 2,
+    caps: [7],
+    discount: "Ahorra ₡4,000"
+  },
+  {
+    id: 6,
+    name: "Combo Reloj + Gorra Royal Blue",
+    priceOriginal: "₡37,000",
+    priceCombo: "₡33,000",
+    description: "Precisión azul glaciar: Rolex Day-Date Ice Blue con esfera azul y gorra Los Angeles Dodgers Royal en crema y azul marino. Presencia streetwear máxima.",
+    watch: 3,
+    caps: [5],
+    discount: "Ahorra ₡4,000"
+  },
+  {
+    id: 7,
+    name: "Combo Reloj + Gorra Sunset Flame",
+    priceOriginal: "₡37,000",
+    priceCombo: "₡33,000",
+    description: "Energía cálida en tu muñeca y cabeza: Rolex Submariner Sunset con esfera naranja degradada y gorra Yankees Crimson en rojo encendido. Vibra deportiva vibrante.",
+    watch: 1,
+    caps: [4],
+    discount: "Ahorra ₡4,000"
   }
 ]
 
@@ -280,8 +320,22 @@ function App() {
                     </div>
                     <p className="combo-preview-desc">{activeCombo.description}</p>
                     
-                    {/* Visual representation of included caps */}
+                    {/* Visual representation of included watch and caps */}
                     <div className="combo-caps-row">
+                      {activeCombo.watch && (() => {
+                        const watch = WATCHES.find(w => w.id === activeCombo.watch)
+                        if (!watch) return null
+                        return (
+                          <div key={`watch-${watch.id}`} className="combo-cap-mini combo-watch-mini">
+                            <div className="mini-image-wrapper">
+                              <img src={watch.image} alt={watch.name} />
+                              <span className="mini-number">R</span>
+                            </div>
+                            <h4>{watch.name}</h4>
+                            <span className="mini-price">{watch.price}</span>
+                          </div>
+                        )
+                      })()}
                       {activeCombo.caps.map((capId, idx) => {
                         const cap = PRODUCTS.find(p => p.id === capId)
                         if (!cap) return null
