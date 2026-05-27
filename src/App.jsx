@@ -76,23 +76,23 @@ const WATCHES = [
   },
   {
     id: 2,
-    name: "Rolex Day-Date Gold",
+    name: "Rolex Day-Date Classic",
     price: "₡25,000",
-    description: "Oro de 18 quilates con esfera dorada cepillada y bisel estriado clásico.",
+    description: "Esfera dorada cepillada y bisel estriado clásico.",
     image: "/images/watch2.jpg"
   },
   {
     id: 3,
     name: "Rolex Day-Date Ice Blue",
     price: "₡25,000",
-    description: "Acero pulido de alta calidad con esfera azul glaciar y números romanos.",
+    description: "Esfera azul glaciar con números romanos y acabado pulido premium.",
     image: "/images/watch3.jpg"
   },
   {
     id: 4,
-    name: "Rolex Submariner Hulk Gold",
+    name: "Rolex Submariner Hulk",
     price: "₡25,000",
-    description: "Oro amarillo de lujo con esfera verde esmeralda y bisel topográfico premium.",
+    description: "Esfera verde esmeralda con bisel topográfico premium.",
     image: "/images/watch4.jpg"
   }
 ]
@@ -130,7 +130,7 @@ const COMBOS = [
     name: "Combo Reloj + Gorra Esmeralda",
     priceOriginal: "₡37,000",
     priceCombo: "₡33,000",
-    description: "El dúo perfecto: Rolex Submariner Hulk Gold con esfera verde esmeralda y gorra Boston Celtics Shamrock en crema y verde. Coordina tu estilo como un campeón.",
+    description: "El dúo perfecto: Rolex Submariner Hulk con esfera verde esmeralda y gorra Boston Celtics Shamrock en crema y verde. Coordina tu estilo como un campeón.",
     watch: 4,
     caps: [6],
     discount: "Ahorra ₡4,000"
@@ -140,7 +140,7 @@ const COMBOS = [
     name: "Combo Reloj + Gorra Gold Elite",
     priceOriginal: "₡37,000",
     priceCombo: "₡33,000",
-    description: "Lujo en tonos dorados: Rolex Day-Date Gold con esfera cepillada y gorra Lakers Desert Gold en crema con logo desierto. Elegancia monocromática premium.",
+    description: "Lujo en tonos dorados: Rolex Day-Date Classic con esfera cepillada y gorra Lakers Desert Gold en crema con logo desierto. Elegancia monocromática premium.",
     watch: 2,
     caps: [7],
     discount: "Ahorra ₡4,000"
